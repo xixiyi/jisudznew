@@ -132,7 +132,7 @@
                   data-src="www.ba8idu.com"
                   data-title="入库"
                 >入库</el-menu-item>
-                <el-submenu index="3-2" class="mokuai_menuManager_3_2">
+                <!-- <el-submenu index="3-2" class="mokuai_menuManager_3_2">
                   <span slot="title">调货</span>
                   <el-menu-item
                     index="3-2-1"
@@ -146,31 +146,43 @@
                     data-src="www.b09aidu.com"
                     data-title="调货明细"
                   >调货明细</el-menu-item>
-                </el-submenu>
-                <el-menu-item
+                </el-submenu> -->
+                                <el-menu-item
+                  index="3-2"
+                  class="mokuai_menuManager_3_2"
+                  data-src="www.baidu.c08om"
+                  data-title="报损报溢"
+                >调货单</el-menu-item>
+                                <el-menu-item
                   index="3-3"
                   class="mokuai_menuManager_3_3"
                   data-src="www.baidu.c08om"
                   data-title="报损报溢"
-                >报损报溢</el-menu-item>
+                >调货明细</el-menu-item>
                 <el-menu-item
                   index="3-4"
                   class="mokuai_menuManager_3_4"
+                  data-src="www.baidu.c08om"
+                  data-title="报损报溢"
+                >报损报溢</el-menu-item>
+                <el-menu-item
+                  index="3-5"
+                  class="mokuai_menuManager_3_5"
                   data-src="www.baidu087.com"
                   data-title="库存详情"
                 >库存详情</el-menu-item>
                 <el-menu-item
-                  index="3-5"
-                  class="mokuai_menuManager_3_5"
+                  index="3-6"
+                  class="mokuai_menuManager_3_6"
                   data-src="www.0674.com"
                   data-title="库存报警"
                 >库存报警</el-menu-item>
                 <el-menu-item
-                  index="3-6"
-                  class="mokuai_menuManager_3_6"
+                  index="3-7"
+                  class="mokuai_menuManager_3_7"
                   data-src="www.3547.com"
-                  data-title="进销存数据"
-                >进销存数据</el-menu-item>
+                  data-title="收发汇总表"
+                >收发汇总表</el-menu-item>
               </el-submenu>
               <el-submenu index="4" class="mokuai_menuManager_4">
                 <template slot="title">

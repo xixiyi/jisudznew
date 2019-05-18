@@ -220,6 +220,7 @@ export default {
       this.treeVisible = true;
       
       if (type == 1) {
+        this.treeTitle = "分配菜单：" + rows[index].mokuainame
         this.treeData = this.menuData;
         console.log(rows[index].menuData)
         var arr = []
