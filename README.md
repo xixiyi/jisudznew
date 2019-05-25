@@ -87,3 +87,14 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
     模块管理
     菜单管理
     日志管理
+
+
+
+    模块管理里面默认 5个模块
+
+    老板  --  全部，
+    销售  --  销货，仓库，
+    文员  --  购货，销货，仓库，
+    财务  --  购货，销货，仓库，资金，
+    仓库  --  销货，仓库，
+    

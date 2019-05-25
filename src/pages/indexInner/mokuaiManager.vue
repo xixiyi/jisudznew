@@ -4,7 +4,8 @@
       <el-button type="primary" size="mini" round @click="openInsertDiv">添加模块</el-button>
     </div>
     <el-table :data="mokuaiData" style="width: 100%" :height="tabHeight">
-      <el-table-column prop="id" label="序号" width="150"></el-table-column>
+      <!-- <el-table-column prop="id" label="序号" width="150"></el-table-column> -->
+      <el-table-column type="index" width="50" label="序号"></el-table-column>
       <el-table-column prop="mokuainame" label="模块名" width="150"></el-table-column>
       <el-table-column fixed="right" label="操作">
         <template slot-scope="scope">
@@ -120,19 +121,21 @@ export default {
   methods: {
     selectMokuai(data) {
       var that = this;
+      data.dbid = JSON.parse(localStorage.user).dbid
       this.axios
         .get(this.commin.comUrl.mokuai.select, {
           params: data
         })
         .then(function(response) {
-          that.mokuaiData = response.data.data[0].list;
-          that.total = response.data.data[0].total;
+          that.mokuaiData = response.data.data.list;
+          that.total = response.data.data.total;
           that.treeVisible = false
         })
         .catch(function(error) {});
     },
     insertMokuai(data) {
       var that = this;
+      data.dbid = JSON.parse(localStorage.user).dbid
       this.axios
         .get(this.commin.comUrl.mokuai.insert, {
           params: data
@@ -146,8 +149,10 @@ export default {
         .catch(function(error) {});
     },
     deleteMokuai(index, rows) {
+      
       var that = this;
       var data = {};
+      data.dbid = JSON.parse(localStorage.user).dbid
       data.id = rows[index].id;
       this.axios
         .get(this.commin.comUrl.mokuai.delete, {
@@ -163,13 +168,14 @@ export default {
     },
     updateMokuai(data){
       var that = this;
+      data.dbid = JSON.parse(localStorage.user).dbid
       this.axios
         .get(this.commin.comUrl.mokuai.update, {
           params: data
         })
         .then(function(response) {
           var data = {};
-          data.pageNum = 1;
+          data.pageNum = that.pageNum;
           data.pageSize = that.pageSize;
           that.selectMokuai(data);
         })

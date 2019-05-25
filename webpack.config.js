@@ -73,7 +73,15 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3)(\?.*)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]'
+        }
       }
+
     ]
   },
   plugins: [
